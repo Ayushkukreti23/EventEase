@@ -40,12 +40,14 @@ const Navbar = () => {
                 >
                   Dashboard
                 </Link>
-                <Link
-                  to="/my-bookings"
-                  className="text-gray-600 hover:text-primary-600 transition-colors"
-                >
-                  My Bookings
-                </Link>
+                {user?.role !== "admin" && (
+                  <Link
+                    to="/my-bookings"
+                    className="text-gray-600 hover:text-primary-600 transition-colors"
+                  >
+                    My Bookings
+                  </Link>
+                )}
                 {user?.role === "admin" && (
                   <Link
                     to="/admin"
