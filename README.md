@@ -82,36 +82,6 @@ The frontend is configured to proxy requests to `http://localhost:5000` (backend
 
 Make sure MongoDB is running on your system or update the `MONGODB_URI` in the config file to point to your MongoDB instance.
 
-### 5. Create Admin User (Optional)
-
-**Option A: Using Frontend Registration (Recommended for Development)**
-
-- Start the application: `npm run dev`
-- Go to `/register` page
-- Check "Register as Admin (Development Only)" checkbox
-- Complete registration with admin role
-
-**Option B: Using Database Script**
-
-```bash
-cd server
-npm run create-admin
-```
-
-This creates an admin user with:
-
-- Email: `admin@eventease.com`
-- Password: `admin123456`
-
-**Option C: Seed Sample Data (Recommended for Testing)**
-
-```bash
-cd server
-npm run seed-events
-```
-
-This creates sample events across different categories for testing the filtering functionality.
-
 ### 6. Start the application
 
 #### Development Mode (Both frontend and backend)
@@ -255,20 +225,6 @@ event_easee/
 - Role-based access control
 - Input validation and sanitization
 - Protected API endpoints
-
-## 🚀 Deployment
-
-### Backend Deployment
-
-1. Set up environment variables for production
-2. Deploy to platforms like Heroku, Railway, or DigitalOcean
-3. Configure MongoDB connection string
-
-### Frontend Deployment
-
-1. Build the application: `npm run build`
-2. Deploy to platforms like Vercel, Netlify, or GitHub Pages
-3. Update API base URL for production
 
 ## 🤝 Contributing
 
